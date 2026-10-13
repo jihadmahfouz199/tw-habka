@@ -1,7 +1,7 @@
 {
     "name": {
         "en": "Habka",
-        "ar": "\u062d\u064e\u0628\u0652\u0643\u0629"
+        "ar": "حَبْكة"
     },
     "description": {
         "en": "",
@@ -10,5 +10,8 @@
     "author_email": "jihad.mahfouz1990@gmail.com",
     "support_url": "",
     "repository": "https://github.com/jihadmahfouz199/tw-habka",
-    "components": []
+    "components": [],
+    "features": [
+        "landing-page-templates"
+    ]
 }
