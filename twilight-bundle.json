@@ -10,8 +10,128 @@
     "author_email": "jihad.mahfouz1990@gmail.com",
     "support_url": "",
     "repository": "https://github.com/jihadmahfouz199/tw-habka",
-    "components": [],
+    "components": [
+        {
+            "name": "habka-marquee",
+            "key": "5f76021b-ef6e-46cc-9f4c-9a531ed33b83",
+            "title": "شريط الإعلانات المتحرك",
+            "icon": "sicon-megaphone",
+            "image": "/assets/habka-marquee-preview.svg",
+            "fields": [
+                {
+                    "id": "text",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "format": "text",
+                    "label": "نص الشريط",
+                    "placeholder": "أدخل نص الإعلان هنا...",
+                    "multilanguage": true,
+                    "required": true,
+                    "minLength": 1,
+                    "maxLength": 160,
+                    "value": {
+                        "ar": "اكتشف أحدث منتجاتنا وعروضنا المميزة",
+                        "en": "Discover our latest products and special offers"
+                    }
+                },
+                {
+                    "id": "separator",
+                    "icon": "sicon-star",
+                    "type": "string",
+                    "format": "text",
+                    "label": "الفاصل بين العبارات",
+                    "placeholder": "✦",
+                    "multilanguage": true,
+                    "required": false,
+                    "maxLength": 4,
+                    "value": {
+                        "ar": "✦",
+                        "en": "✦"
+                    }
+                },
+                {
+                    "id": "speed",
+                    "icon": "sicon-clock",
+                    "type": "number",
+                    "format": "number",
+                    "inputType": "number",
+                    "label": "مدة الدورة بالثواني",
+                    "required": true,
+                    "minimum": 8,
+                    "maximum": 60,
+                    "step": 1,
+                    "value": 22
+                },
+                {
+                    "id": "direction",
+                    "icon": "sicon-swap-horizontal",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "source": "Manual",
+                    "label": "اتجاه الحركة",
+                    "required": true,
+                    "options": [
+                        {
+                            "label": "افتراضي",
+                            "value": "forward",
+                            "key": "forward"
+                        },
+                        {
+                            "label": "معكوس",
+                            "value": "reverse",
+                            "key": "reverse"
+                        }
+                    ],
+                    "selected": [
+                        {
+                            "label": "افتراضي",
+                            "value": "forward",
+                            "key": "forward"
+                        }
+                    ]
+                },
+                {
+                    "id": "pause_on_hover",
+                    "icon": "sicon-pause",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إيقاف الحركة عند مرور المؤشر",
+                    "required": false,
+                    "value": true
+                },
+                {
+                    "id": "background_color",
+                    "icon": "sicon-color-palette",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون الخلفية",
+                    "required": false,
+                    "value": "#111827"
+                },
+                {
+                    "id": "text_color",
+                    "icon": "sicon-color-palette",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون النص",
+                    "required": false,
+                    "value": "#ffffff"
+                }
+            ]
+        }
+    ],
     "features": [
         "landing-page-templates"
-    ]
+    ],
+    "demo_settings": {
+        "mock_product": {
+            "enabled": true,
+            "status": "available",
+            "price": 100,
+            "regularPrice": 150,
+            "isOnSale": true
+        }
+    }
 }
