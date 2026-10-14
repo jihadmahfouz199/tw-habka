@@ -12,7 +12,7 @@
         "lit": "^3.2.1"
     },
     "devDependencies": {
-        "@salla.sa/twilight-bundles": "^0.1.0",
+        "@salla.sa/twilight-bundles": "^0.1.63",
         "vite": "^5.0.0"
     },
     "author": "jihad.mahfouz1990@gmail.com",

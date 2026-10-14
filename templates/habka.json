@@ -1,0 +1,120 @@
+{
+  "id": "1688ade1-e800-45df-a3ec-bb3d23ddc1f1",
+  "components": [
+    {
+      "name": "habka-marquee",
+      "key": "5f76021b-ef6e-46cc-9f4c-9a531ed33b83",
+      "title": "شريط الإعلانات المتحرك",
+      "icon": "sicon-megaphone",
+      "image": "/assets/habka-marquee-preview.svg",
+      "fields": [
+        {
+          "id": "text",
+          "type": "string",
+          "format": "text",
+          "label": "نص الشريط",
+          "multilanguage": true,
+          "required": true,
+          "value": {
+            "ar": "اكتشف أحدث منتجاتنا وعروضنا المميزة",
+            "en": "Discover our latest products and special offers"
+          }
+        },
+        {
+          "id": "separator",
+          "type": "string",
+          "format": "text",
+          "label": "الفاصل بين العبارات",
+          "multilanguage": true,
+          "required": false,
+          "value": {
+            "ar": "✦",
+            "en": "✦"
+          }
+        },
+        {
+          "id": "speed",
+          "type": "number",
+          "format": "number",
+          "label": "مدة الدورة بالثواني",
+          "required": true,
+          "min": 8,
+          "max": 60,
+          "value": 22
+        },
+        {
+          "id": "direction",
+          "type": "string",
+          "format": "dropdown-list",
+          "label": "اتجاه الحركة",
+          "required": true,
+          "value": "forward",
+          "options": [
+            {
+              "label": "افتراضي",
+              "value": "forward"
+            },
+            {
+              "label": "معكوس",
+              "value": "reverse"
+            }
+          ]
+        },
+        {
+          "id": "pause_on_hover",
+          "type": "boolean",
+          "format": "switch",
+          "label": "إيقاف الحركة عند مرور المؤشر",
+          "required": false,
+          "value": true,
+          "selected": true
+        },
+        {
+          "id": "background_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "required": false,
+          "value": "#e7d0d0"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "required": false,
+          "value": ""
+        }
+      ]
+    },
+    {
+      "name": "habka-image-banner",
+      "key": "4da0b65e-73cd-4c45-9164-09885c6177f1",
+      "title": "بانر صورة",
+      "icon": "sicon-image",
+      "image": "/assets/habka-image-banner-preview.svg",
+      "fields": [
+        {
+          "id": "image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة البانر",
+          "required": true,
+          "value": "/assets/habka-image-banner-preview.svg"
+        },
+        {
+          "id": "alt_text",
+          "type": "string",
+          "format": "text",
+          "label": "وصف الصورة",
+          "multilanguage": true,
+          "required": false,
+          "value": {
+            "ar": "",
+            "en": ""
+          }
+        }
+      ]
+    }
+  ]
+}

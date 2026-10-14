@@ -13,7 +13,7 @@ importers:
         version: 3.3.3
     devDependencies:
       '@salla.sa/twilight-bundles':
-        specifier: ^0.1.0
+        specifier: ^0.1.63
         version: 0.1.63
       vite:
         specifier: ^5.0.0

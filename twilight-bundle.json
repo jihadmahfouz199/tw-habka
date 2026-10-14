@@ -120,10 +120,41 @@
                     "value": "#ffffff"
                 }
             ]
+        },
+        {
+            "name": "habka-image-banner",
+            "key": "4da0b65e-73cd-4c45-9164-09885c6177f1",
+            "title": "بانر صورة",
+            "icon": "sicon-image",
+            "image": "/assets/habka-image-banner-preview.svg",
+            "fields": [
+                {
+                    "id": "image",
+                    "icon": "sicon-image",
+                    "type": "string",
+                    "format": "image",
+                    "label": "صورة البانر",
+                    "description": "يفضل استخدام صورة عريضة مناسبة للجوال وسطح المكتب.",
+                    "required": true,
+                    "value": "/assets/habka-image-banner-preview.svg"
+                },
+                {
+                    "id": "alt_text",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "format": "text",
+                    "label": "وصف الصورة",
+                    "placeholder": "وصف مختصر لمحتوى البانر",
+                    "multilanguage": true,
+                    "required": false,
+                    "maxLength": 160,
+                    "value": {
+                        "ar": "",
+                        "en": ""
+                    }
+                }
+            ]
         }
-    ],
-    "features": [
-        "landing-page-templates"
     ],
     "demo_settings": {
         "mock_product": {
@@ -133,5 +164,15 @@
             "regularPrice": 150,
             "isOnSale": true
         }
-    }
+    },
+    "templates": [
+        {
+            "id": "1688ade1-e800-45df-a3ec-bb3d23ddc1f1",
+            "path": "templates.habka",
+            "category_id": "665151403",
+            "primary_color": "",
+            "thumbnail": "templates-thumbs/habka.png",
+            "is_default": true
+        }
+    ]
 }

@@ -13,6 +13,7 @@ export default class HabkaMarquee extends LitElement {
       --marquee-background: var(--color-primary, #111827);
       --marquee-color: var(--color-primary-reverse, #ffffff);
       --marquee-duration: 22s;
+      --marquee-distance: -50%;
       display: block;
       max-inline-size: 100%;
       overflow: hidden;
@@ -47,11 +48,15 @@ export default class HabkaMarquee extends LitElement {
       background: linear-gradient(to left, var(--marquee-background), transparent);
     }
 
-    :host-context([dir='rtl']) .marquee::before {
+    .marquee[dir='rtl'] {
+      --marquee-distance: 50%;
+    }
+
+    .marquee[dir='rtl']::before {
       background: linear-gradient(to left, var(--marquee-background), transparent);
     }
 
-    :host-context([dir='rtl']) .marquee::after {
+    .marquee[dir='rtl']::after {
       background: linear-gradient(to right, var(--marquee-background), transparent);
     }
 
@@ -99,7 +104,7 @@ export default class HabkaMarquee extends LitElement {
 
     @keyframes marquee-scroll {
       to {
-        transform: translate3d(-50%, 0, 0);
+        transform: translate3d(var(--marquee-distance), 0, 0);
       }
     }
 
@@ -141,6 +146,16 @@ export default class HabkaMarquee extends LitElement {
     return direction || 'forward';
   }
 
+  private get textDirection(): 'rtl' | 'ltr' {
+    const documentDirection = document.documentElement.dir?.toLowerCase();
+    if (documentDirection === 'rtl' || documentDirection === 'ltr') {
+      return documentDirection;
+    }
+
+    const language = document.documentElement.lang?.split('-')[0].toLowerCase();
+    return ['ar', 'fa', 'he', 'ur'].includes(language) ? 'rtl' : 'ltr';
+  }
+
   private renderGroup(text: string, separator: string, hidden = false) {
     return html`
       <span class="group" aria-hidden=${hidden ? 'true' : 'false'}>
@@ -164,6 +179,7 @@ export default class HabkaMarquee extends LitElement {
     return html`
       <section
         class="marquee ${pauseClass}"
+        dir=${this.textDirection}
         style=${`--marquee-duration:${this.duration}s;--marquee-background:${background};--marquee-color:${color}`}
         aria-label=${text}
       >

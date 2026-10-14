@@ -10,7 +10,7 @@ export default defineConfig({
     sallaTransformPlugin(),
     sallaBuildPlugin(),
     sallaDemoPlugin({
-      components: ['habka-marquee'],
+      components: ['habka-marquee', 'habka-image-banner'],
       grid: {
         columns: 'minmax(0, 1fr)',
         gap: '1rem',
